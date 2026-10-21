@@ -11,6 +11,10 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-05-01' = {
   properties: {
     accessTier: 'Hot'
   }
+  tags: {
+    Environment: 'Development'
+    ManagedBy: 'Bicep'
+  }
 }
 
 output storageAccountId string = storageAccount.id
